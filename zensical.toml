@@ -1,0 +1,176 @@
+[project]
+site_name = "Bearing-Zero Docs"
+site_url = "https://pages.bearing-zero.com"
+docs_dir = "docs"
+repo_url = "https://gitlab.bearing-zero.com/documents/homelab-docs"
+repo_name = "documents/homelab-docs"
+
+nav = [
+  "index.md",
+  { "Platform" = [
+      "platform/overview.md",
+      "platform/architecture.md",
+      "platform/standardization-roadmap.md",
+      "platform/identity-access.md",
+      "platform/observability.md"
+    ]},
+  { "Operations" = [
+      "operations/runbooks.md",
+      "operations/security.md",
+      "operations/wazuh-operations-checklist.md",
+      "operations/backup-recovery-runbook.md",
+      "operations/k3s-gitops-operations-runbook.md"
+    ]},
+  { "Hardware" = [
+      "hardware/index.md",
+      "hardware/modem-hitron-coda56.md",
+      "hardware/nas-ugreen-dxp4800plus.md",
+      "hardware/proxmox-beelink-ser5.md",
+      "hardware/proxmox-kamrui-e3b.md",
+      "hardware/router-asus-gt-be98-pro.md",
+      "hardware/switch-tplink-tl-sx1008.md",
+      "hardware/workstation-comet.md",
+      "hardware/workstation-cosmic01.md"
+    ]},
+  { "Software" = [
+      "software/index.md"
+    ]},
+  { "Network" = [
+      "network/source-of-truth.md",
+      "network/docker.md",
+      "network/full-hosts.md",
+      "network/hardware.md",
+      "network/k3s.md",
+      "network/proxmox.md",
+      "network/index.md",
+      "network/dns-cleanup-inventory.md"
+    ]},
+  { "Diagrams" = [
+      "diagrams/index.md",
+      "diagrams/core-infrastructure.md",
+      "diagrams/docker-services.md",
+      "diagrams/full-network-diagram.md",
+      "diagrams/k3s-cluster.md",
+      "diagrams/network-overview.md",
+      "diagrams/system-diagram.md"
+    ]},
+  { "Reference" = [
+      "reference/standards.md",
+      "reference/documentation-standards.md",
+      "reference/random-usefull-stuff.md",
+      "reference/bashrc-alias-guide.md",
+      "reference/passwordless-login-ssh.md",
+      "reference/npm-cert-request-form-ipa.md",
+      "reference/Creating an AlmaLinux 9.7 Cloud-Init Template in Proxmox.md",
+      { "AI Context" = [
+          "reference/k3s-homelab-context.md",
+          "reference/k3s-homelab-context-updated.md"
+      ]},
+      { "Future" = [
+      "reference/gitlab-layout.md"
+      ]},
+      { "GitOps Strategies" = [
+      "gitops-strategies/gitops-strategies.md",
+      "gitops-strategies/strategies-updates.md"
+      ]},
+      "reference/changelog.md"
+    ]},
+  { "Install Docs" = [
+      { "Ansible" = [
+          "install-docs/ansible/ansible-automation.md",
+          "install-docs/ansible/ansible-setup-for-almalinux-updates.md",
+          "install-docs/ansible/almalinux-server-updates.md",
+          "install-docs/ansible/k3s-patch-and-rolling-reboot.md",
+          "install-docs/ansible/k3s-production-rolling-restarts.md"
+        ]},
+      { "Terraform" = [
+          "install-docs/terraform/Terraform-Automation Project Summary.md",
+          "install-docs/terraform/Terraform-Automation — Initial GitLab and Proxmox Setup.md"
+        ]},
+      { "Docker" = [
+          "install-docs/docker/docker-install-guide.md"
+        ]},
+      { "Dockhand" = [
+          "install-docs/dockhand/install-dockhand.md",
+          "install-docs/dockhand/install-hawser-agent.md"
+        ]},
+      { "Harbor" = [
+          "install-docs/harbor/harbor-install.md"
+        ]},
+      { "Helm" = [
+          "install-docs/helm/helm-install.md"
+        ]},
+      { "MetalLB" = [
+          "install-docs/metallb/deploying-metallb.md",
+          "install-docs/metallb/k3s-metallb-ig.md",
+          "install-docs/metallb/metallb-dns-guide.md"
+        ]},
+      { "Ollama" = [
+          "install-docs/ollama/expose-ollama.md"
+        ]},
+      { "Open-WebUI" = [
+          "install-docs/open-webui/install-openwebui.md",
+          "install-docs/open-webui/starting-with-ollama.md",
+          "install-docs/open-webui/update-openwebui.md"
+        ]},
+      { "Wazuh" = [
+          "install-docs/wazuh/wazuh-install.md",
+          "install-docs/wazuh/wazuh-agent-uninstall.md"
+        ]},
+      { "SearXNG" = [
+          "install-docs/searxng/searxng-install.md"
+        ]}
+    ]}
+]
+
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/extra.js"]
+
+[project.markdown]
+extensions = [
+  "pymdownx.highlight",
+  "pymdownx.superfences",
+  "pymdownx.inlinehilite",
+  "pymdownx.snippets",
+  "pymdownx.keys",
+  "pymdownx.tabbed",
+  "pymdownx.caret",
+  "pymdownx.mark",
+  "pymdownx.tilde",
+  "pymdownx.details",
+  "pymdownx.saneheaders",
+  "pymdownx.magiclink",
+  "pymdownx.tasklist"
+]
+
+[project.theme]
+variant = "modern"
+features = [
+    "navigation.tabs",
+    "navigation.tabs.sticky",
+    "navigation.sections",
+    "navigation.path",
+    "toc.follow",
+    "navigation.top",
+    "content.code.copy",
+    "content.code.select",
+    "content.action.edit",
+    "content.action.view"
+]
+
+[project.theme.icon]
+repo = "fontawesome/brands/gitlab"
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
